@@ -129,51 +129,78 @@ section .header {
   font-size: 2.25rem;
   font-weight: 600;
 }
-#services .blur {
+#brands {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding-block: min(20vh, 6rem);
+  text-align: center;
+  width: calc(min(90rem, 90%));
+  margin-inline: auto;
+}
+#brands span,
+#brands p,
+#brands h2,
+#brands h3 {
+  letter-spacing: 0.035rem;
+}
+#brands span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.8rem;
+  color: #a3a3a3;
+}
+#brands p {
+  line-height: 1.6;
+  color: #a3a3a3;
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+}
+#brands h2 {
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 5rem);
+  margin-top: -0.625rem;
+  color: #fff;
+}
+/* #brands .blur {
   top: 1500px;
-  left: 1500px;
+  left: 1000px;
+} */
+
+.brands {
+  padding: 0 80px;
+  margin: 40px 0 80px;
+  display: flex;
+  gap: 30px;
 }
-.services {
-  margin-top: 4rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-}
-.services .card {
-  background: rgba(12, 15, 20, 0.5);
-  padding: 1rem;
-  border: 2px solid --primary;
+
+.brands .item {
+  background: none;
+  display: flex;
+  align-items: center;
+  width: 25%;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 18px;
+  cursor: pointer;
   transition: all 0.3s ease;
 }
-.services .card:hover {
-  border-color: var(--secondary);
-}
-.services .card span {
-  display: inline-block;
-  background-color: var(--secondary);
-  padding: 2px 9px;
-  margin-bottom: 2rem;
-  font-size: 1.75rem;
-  color: #fff;
-  border-radius: 5px;
-  width: fit-content;
-}
-.services .card h4 {
-  margin-bottom: 1rem;
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-.services .card p {
-  color: #ccc;
-  margin-bottom: 1px;
-}
-.services .card a {
-  color: #fff;
+
+.brands .item img {
+  width: 100%;
+  filter: grayscale(100%);
   transition: all 0.3s ease;
 }
-.services .card a:hover {
-  color: var(--secondary);
+.brands .item img:hover {
+  filter: grayscale(0);
+}
+.brands .item .info p {
+  font-size: 14px;
+  margin-top: 8px;
+}
+#services .blur {
+  top: 2300px;
+  left: 1600px;
 }
 
 @media (width < 900px) {
@@ -214,9 +241,3 @@ section .header {
     grid-template-columns: 1fr 150px;
   }
 }
-
-
-
-
-
-
