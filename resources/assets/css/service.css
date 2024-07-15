@@ -20,7 +20,6 @@
   margin: 0 auto;
   font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
 }
-
 #services .bg-watermark {
   color: #ffffff27;
   font-size: clamp(6rem, 1.3333rem + 14.9333vw, 20rem);
@@ -28,7 +27,7 @@
   position: absolute;
   z-index: -1;
   left: 50%;
-  transform: translatex(-50%) translatey(-15%);
+  transform: translateX(-50%) translateY(-15%);
   user-select: none;
   letter-spacing: 0.5rem;
 }
@@ -81,12 +80,6 @@
   height: 6.25rem;
   z-index: 0;
   transition: 0.3s ease-in-out;
-  background: rgb(1, 195, 141);
-  background: -webkit-linear-gradient(
-    to left,
-    rgb(1, 195, 141),
-    rgb(19, 45, 70)
-  );
   background: linear-gradient(to right, rgb(1, 195, 141), rgb(19, 45, 70));
   top: -0.375rem;
   left: -0.375rem;
@@ -97,21 +90,32 @@
   content: "";
   width: 100%;
   height: 100%;
-  background: #232526;
-  background: -webkit-linear-gradient(
-    to bottom,
-    rgba(65, 67, 69, 0.2),
-    rgba(8, 8, 8, 0.9)
-  );
-  background: linear-gradient(
-    to bottom,
-    rgba(65, 67, 69, 0.2),
-    rgba(8, 8, 8, 0.9)
-  );
+  background: linear-gradient(to bottom, rgba(65, 67, 69, 0.2), rgba(8, 8, 8, 0.9));
 }
 #services .cards .card img {
   filter: grayscale(100%);
   transition: 0.5s ease;
+}
+#services .cards .card:hover img {
+  filter: grayscale(0%);
+}
+#services .cards .card:hover::before {
+  transform: scale(1.03);
+}
+#services .cards .card:nth-child(1)::before,
+#services .cards .card:nth-child(3)::before {
+  top: -0.375rem;
+  left: -0.375rem;
+}
+#services .cards .card:nth-child(2)::before {
+  bottom: -0.375rem;
+  left: -0.375rem;
+  top: auto;
+}
+@media screen and (min-width: 31.25rem) {
+  #services .cards .card:nth-child(2) {
+    transform: translateY(15%);
+  }
 }
 #services .cards .card-content {
   position: absolute;
@@ -122,43 +126,16 @@
   width: 100%;
   padding: 1.875rem 1.25rem;
   text-align: center;
-
 }
-
 #services .cards .card-content ul {
   list-style-type: none;
   margin-top: 1.25rem;
   list-style: none;
 }
-
 #services .cards .card-content ul a {
   color: #fff;
   font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
 }
 #services .cards .card-content ul a:hover {
   color: rgb(1, 195, 141);
-}
-#services .cards .card:hover img {
-  filter: grayscale(0%);
-}
-#services .cards .card:hover::before {
-  transform: scale(1.03);
-}
-#services .cards .card:nth-child(1)::before {
-  top: -0.375rem;
-  left: -0.375rem;
-}
-@media screen and (min-width: 31.25rem) {
-  #services .cards .card:nth-child(2) {
-    transform: translatey(15%);
-  }
-}
-#services .cards .card:nth-child(2)::before {
-  bottom: -0.375rem;
-  left: -0.375rem;
-  top: auto;
-}
-#services .cards .card:nth-child(3)::before {
-  top: -0.375rem;
-  left: -0.375rem;
 }
