@@ -1,0 +1,164 @@
+#services {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  padding-block: min(20vh, 6rem);
+  text-align: center;
+  width: calc(min(90rem, 90%));
+  margin-inline: auto;
+}
+#services span,
+#services p,
+#services h2,
+#services h3 {
+  letter-spacing: 0.035rem;
+}
+#services p {
+  line-height: 1.6;
+  color: #a3a3a3;
+  max-width: 50rem;
+  margin: 0 auto;
+  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+}
+
+#services .bg-watermark {
+  color: #ffffff27;
+  font-size: clamp(6rem, 1.3333rem + 14.9333vw, 20rem);
+  font-weight: 800;
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  transform: translatex(-50%) translatey(-15%);
+  user-select: none;
+  letter-spacing: 0.5rem;
+}
+#services span {
+  text-transform: uppercase;
+  display: block;
+  font-size: 0.8rem;
+  color: #a3a3a3;
+}
+#services h2 {
+  font-size: clamp(1.5rem, 1rem + 1.6vw, 5rem);
+  margin-top: -0.625rem;
+  color: #fff;
+}
+#services .cards {
+  margin-top: 7rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  gap: 2rem;
+}
+@media screen and (min-width: 51rem) {
+  #services .cards {
+    gap: 0;
+    padding-bottom: 2.5rem;
+  }
+}
+#services .cards .card {
+  position: relative;
+  cursor: pointer;
+}
+#services .cards .card h3,
+#services .cards .card p {
+  text-transform: capitalize;
+}
+#services .cards .card h3 {
+  font-size: clamp(1rem, 0.9167rem + 0.2667vw, 1.25rem);
+  font-weight: 400;
+  color: #f6f6f6;
+}
+#services .cards .card p {
+  font-size: clamp(0.85rem, 0.75rem + 0.32vw, 1.15rem);
+  letter-spacing: 0.12rem;
+  font-weight: 300;
+  max-width: 100%;
+}
+#services .cards .card::before {
+  position: absolute;
+  content: "";
+  width: 5rem;
+  height: 6.25rem;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+  background: rgb(1, 195, 141);
+  background: -webkit-linear-gradient(
+    to left,
+    rgb(1, 195, 141),
+    rgb(19, 45, 70)
+  );
+  background: linear-gradient(to right, rgb(1, 195, 141), rgb(19, 45, 70));
+  top: -0.375rem;
+  left: -0.375rem;
+}
+#services .cards .card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #232526;
+  background: -webkit-linear-gradient(
+    to bottom,
+    rgba(65, 67, 69, 0.2),
+    rgba(8, 8, 8, 0.9)
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(65, 67, 69, 0.2),
+    rgba(8, 8, 8, 0.9)
+  );
+}
+#services .cards .card img {
+  filter: grayscale(100%);
+  transition: 0.5s ease;
+}
+#services .cards .card-content {
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  left: 0;
+  color: #fff;
+  width: 100%;
+  padding: 1.875rem 1.25rem;
+  text-align: center;
+
+}
+
+#services .cards .card-content ul {
+  list-style-type: none;
+  margin-top: 1.25rem;
+  list-style: none;
+}
+
+#services .cards .card-content ul a {
+  color: #fff;
+  font-size: clamp(0.9rem, 0.825rem + 0.3vw, 1.2rem);
+}
+#services .cards .card-content ul a:hover {
+  color: rgb(1, 195, 141);
+}
+#services .cards .card:hover img {
+  filter: grayscale(0%);
+}
+#services .cards .card:hover::before {
+  transform: scale(1.03);
+}
+#services .cards .card:nth-child(1)::before {
+  top: -0.375rem;
+  left: -0.375rem;
+}
+@media screen and (min-width: 31.25rem) {
+  #services .cards .card:nth-child(2) {
+    transform: translatey(15%);
+  }
+}
+#services .cards .card:nth-child(2)::before {
+  bottom: -0.375rem;
+  left: -0.375rem;
+  top: auto;
+}
+#services .cards .card:nth-child(3)::before {
+  top: -0.375rem;
+  left: -0.375rem;
+}
