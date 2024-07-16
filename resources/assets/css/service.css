@@ -6,6 +6,7 @@
   text-align: center;
   width: calc(min(90rem, 90%));
   margin-inline: auto;
+  min-height: 100%;
 }
 #services span,
 #services p,
